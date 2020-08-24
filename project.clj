@@ -1,4 +1,4 @@
-(defproject cli-progress "0.1.0-SNAPSHOT"
+(defproject cli-progress "0.1.0"
   :description "CLI Progress bar with multibar support"
   :url "https://github.com/jgalrito/cli-progress"
   :license {:name "MIT License"
