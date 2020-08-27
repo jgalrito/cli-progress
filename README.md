@@ -4,14 +4,14 @@ Simple CLI progress bar that allows multiple bars
 
 ## Installation
 
-`[cli-progress "0.1.0"]`
+`[cli-progress "0.2.1"]`
 
 ## Usage
 
 Print to terminal:
 ```clojure
-(let [bar1 (cli-progress/inc (cli-progress/bar 100 "bar1") 10)
-	  bar2 (cli-progress/inc (cli-progress/bar 50 "bar2") 30)])
+(let [bar1 (cli-progress/bar 100 10 "bar1")
+	  bar2 (cli-progress/bar 50 30 "bar2")])
 	(cli-progress/print bar1 bar2)
 	(cli-progress/stop bar1 bar2)
 ```
@@ -21,8 +21,8 @@ Don't forget to call `cli-progress/stop` when you're done to position the cursor
 Render as string:
 ```clojure
 (cli-progress/render
-	(cli-progress/inc (cli-progress/bar 100 "bar1") 10)
-	(cli-progress/inc (cli-progress/bar 50 "bar2") 30))
+	(cli-progress/bar 100 10 "bar1")
+	(cli-progress/bar 50 30 "bar2"))
 ```
 
 ## License
