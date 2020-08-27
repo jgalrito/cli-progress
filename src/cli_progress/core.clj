@@ -30,7 +30,7 @@
 
 (defn render [& bars]
   (join \newline (map render-bar bars)))
-
+c
 (defn print [& bars]
   (move-start)
   (core/print (apply render bars))
@@ -41,10 +41,6 @@
   (move-down (count bars))
   (core/print \newline))
 
-(defn inc
-  ([bar] (inc bar 1))
-  ([bar n] (assoc bar :current (+ n (:current bar)))))
-
 (defn bar
-  ([max] {:max max :current 0})
-  ([max name] (assoc (bar max) :name name)))
+  ([max current] {:max max :current current})
+  ([max current name] (assoc (bar max current) :name name)))
