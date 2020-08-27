@@ -30,7 +30,7 @@
 
 (defn render [& bars]
   (join \newline (map render-bar bars)))
-c
+
 (defn print [& bars]
   (move-start)
   (core/print (apply render bars))
